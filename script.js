@@ -3,13 +3,14 @@ var semua_waktu = [1];
 counter = 0;
 
 $( document ).on( "mobileinit", function() {
- 
-    // We want popups to cover the page behind them with a dark background
-    $.mobile.popup.prototype.options.overlayTheme = "b";
-   
-    // Set a namespace for jQuery Mobile data attributes
-    $.mobile.ns = "jqm-";
+    alert("init")
+});
+
+$( window ).on( "orientationchange", function( event ) {
+    alert("This device is in " + event.orientation + " mode!");
   });
+  
+
 
 function input_pinjaman(){
     var jumlah = document.getElementById("jumlah_pinjaman");

@@ -35,17 +35,22 @@
             <ul>
                 <li><a href="#halaman1" class="ui-btn-active">input pinjaman</a></li>
                 <li><a href="#halaman2" class="ui-btn-active">list cicilan</a></li>
-                <li><a href="#hlm3" class="ui-btn-active">To mean counter</a></li>
             </ul>
         </div><!-- /navbar -->	
 
 		<div data-role="content" data-theme="b">
             <label for="jumlah_pinjaman">jumlah pinjaman:</label>
-            <input type="number" name="jumlah_pinjaman" pattern="[0-9]" id="jumlah_pinjaman" value="">  
+            <input type="number" name="jumlah_pinjaman" pattern="[0-9]" id="jumlah_pinjaman" value="0"> 
 
             <label for="waktu_pinjaman">waktu_pinjaman:</label>
             <input type="range" name="waktu_pinjaman" id="waktu_pinjaman" value="6" min="0" max="100" step="1" data-highlight="true">
             <button onclick="input_pinjaman();">submit</button>
+
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <legend>Checkboxes, mini, horizontal controlgroup:</legend>
+                <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                <label for="checkbox-6">b</label>
+            </fieldset>
 
             <div id="hasil-input">
                 <div>pinjaman: <span id="hasil-jumlah"></span></div>
@@ -71,9 +76,8 @@
 
         <div data-role="collapsibleset" data-theme="a" data-content-theme="a" id="list-pinjaman">
             <div data-role="collapsible">
-                <h3>move to page:</h3>
+                <h3>belum ada pinjaman</h3>
                 <ul data-role=listview>
-                    <li><a href="#hlm1" data-transition=flip>Fibonaci</a></li>
                 </ul>>
             </div>
         </div>

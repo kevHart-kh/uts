@@ -18,6 +18,10 @@ function input_pinjaman(){
         semua_jumlah[0]=jumlah;
         semua_waktu[0]=waktu;
         counter++;
+    }else{
+        semua_jumlah=push(jumlah);
+        semua_waktu=push(waktu);
+        counter++;
     }
 
     var hasil = jumlah+(jumlah*bunga/100*waktu);
@@ -26,5 +30,4 @@ function input_pinjaman(){
     var stringHasil=""+jumlah+" + ( " + jumlah +" * " + bunga + "% * " + waktu + " ) = " + hasil;
     
     document.getElementById("hasil-pengembalian").innerHTML = stringHasil;
-
 }

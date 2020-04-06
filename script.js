@@ -8,11 +8,18 @@ function input_pinjaman(){
     jumlah = parseInt(jumlah.value)
     document.getElementById("hasil-jumlah").innerHTML=jumlah;
 
-    var bunga=2;
-
     var waktu = document.getElementById("waktu_pinjaman");
     waktu = parseInt(waktu.value);
     document.getElementById("hasil-waktu").innerHTML = waktu;
+    
+    var bunga;
+    if (waktu<=6) {
+        bunga=2;
+    }else if(waktu<=12){
+        bunga=1.5;
+    }else{
+        bunga=1;
+    }
 
     if (counter == 0) {
         semua_jumlah[0]=jumlah;

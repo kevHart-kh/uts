@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<title>KEVIN HARTONO</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<script src="script.js"></script>
+
+
+</head>
+<body>
+	<div data-role="page" id="hm">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#hlm1" class="ui-btn-active">input pinjaman</a></li>
+                <li><a href="#hlm2" class="ui-btn-active">To mean counter</a></li>
+                <li><a href="#hlm3" class="ui-btn-active">To mean counter</a></li>
+            </ul>
+        </div><!-- /navbar -->	
+    </div>
+
+	<div data-role="page" id="hlm1">
+		<div data-role=header>
+			<h2>input pinjaman</h2>
+		</div>
+
+		<div data-role="content" data-theme="b">
+            <label for="jumlah_pinjaman">jumlah pinjaman:</label>
+            <input type="number" name="jumlah_pinjaman" pattern="[0-9]" id="jumlah_pinjaman" value="">  
+
+            <label for="waktu_pinjaman">waktu_pinjaman:</label>
+            <input type="range" name="waktu_pinjaman" id="waktu_pinjaman" value="6" min="0" max="100" step="1" data-highlight="true">
+            <button onclick="input_pinjaman();">submit</button>
+
+            <div id="hasil-input">
+                <div>pinjaman: <span id="hasil-jumlah"></span></div>
+                <div>waktu pinjam: <span id="hasil-waktu"></span> cicilan</div>
+                <div>total pengembalian: <span id="hasil-pengembalian"></span></div>
+            </div>
+
+		</div>
+
+
+
+        <div data-role="page" id="hlm1">
+            <div data-role=header>
+                <h2>input pinjaman</h2>
+            </div>
+    
+            <div data-role="content" data-theme="b">
+                <label for="jumlah_pinjaman">jumlah pinjaman:</label>
+                <input type="number" name="jumlah_pinjaman" pattern="[0-9]" id="jumlah_pinjaman" value="">  
+    
+                <label for="waktu_pinjaman">waktu_pinjaman:</label>
+                <input type="range" name="waktu_pinjaman" id="waktu_pinjaman" value="6" min="0" max="100" step="1" data-highlight="true">
+    
+                <a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">coba dipencet yaa</a>
+                <div data-role="popup" id="popupPadded" class="ui-content">
+                    <p>HALO SELAMAT DATANG. SAYA <br>kevin hartono<br>c14180077</p>
+                </div>
+    
+
+
+                <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+                    <div data-role="collapsible">
+                        <h3>hitung mean</h3>
+                    <div data-role=fieldcontain>
+                        <input type="text" name="val" id="val" placeholder="value">
+                        <button onclick="add()">add value</button>
+                        <button onclick="mean()">hitung mean</button>
+                        <input type="text" name="" id="hasil_mean" disabled="">
+                    </div>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>move to page:</h3>
+                    <ul data-role=listview>
+                        <li><a href="#hlm1" data-transition=flip>Fibonaci</a></li>
+                    </ul>>
+                    </div>
+                </div>
+            </div>
+
+	<!-- </div>
+
+		<div data-role="page" id="hlm2">
+		<div data-role=header>
+			<h2>Halaman 2</h2>
+		</div>
+
+		<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">coba dipencet yaa</a>
+		<div data-role="popup" id="popupPadded" class="ui-content">
+			<p>HALO SELAMAT DATANG. SAYA <br>kevin hartono<br>c14180077</p>
+		</div>
+ 
+		<div data-role="content" data-theme="b">
+			rata rata
+			<div data-role=fieldcontain>
+				<input type="text" name="val" id="val" placeholder="value">
+				<button onclick="add()">add value</button>
+				<button onclick="mean()">hitung mean</button>
+				<input type="text" name="" id="hasil_mean" disabled="">
+			</div>
+
+			<ul data-role=listview>
+				<li><a href="#hlm1" data-transition=flip>Fibonaci</a></li>
+			</ul>>
+		</div>
+
+	</div> -->
+
+</body>
+</html>

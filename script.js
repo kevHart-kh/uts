@@ -1,5 +1,6 @@
 var semua_jumlah = [1];
 var semua_waktu = [1];
+var nama = [1];
 counter = 0;
 
 $( document ).on( "mobileinit", function() {
@@ -27,6 +28,8 @@ function input_pinjaman(){
     waktu = parseInt(waktu.value);
     document.getElementById("hasil-waktu").innerHTML = waktu;
     
+    var nama=document.getElementById("nama").value;
+
     var bunga;
     if (waktu<=6) {
         bunga=2;
@@ -36,18 +39,11 @@ function input_pinjaman(){
         bunga=1;
     }
 
-    if (counter == 0) {
-        semua_jumlah[0]=jumlah;
-        semua_waktu[0]=waktu;
-        counter++;
-    }else{
-        // semua_jumlah=push(jumlah);
-        // semua_waktu=push(waktu);
-
-        semua_jumlah[counter]=jumlah;
-        semua_waktu[counter]=waktu;
-        counter++;
-    }
+   
+    nama[counter]=nama;
+    semua_jumlah[counter]=jumlah;
+    semua_waktu[counter]=waktu;
+    counter++;
 
     var hasil = jumlah+(jumlah*bunga/100*waktu);
     
@@ -71,7 +67,7 @@ function update_listPinjaman(){
     var html="";
 
     for (let index = 0; index < counter; index++) {
-        html += '<div data-role="collapsible"><h3>pinjaman:'+ semua_jumlah[index] + 'waktu:' + semua_waktu[index] +'</h3><ul data-role=listview>'
+        html += '<div data-role="collapsible"><h3>'+nama[index]+'pinjaman:'+ semua_jumlah[index] + 'waktu:' + semua_waktu[index] +'</h3><ul data-role=listview>'
 
         var waktu = semua_waktu[index];
         var jumlah = semua_jumlah[index];

@@ -41,6 +41,9 @@
             <label for="jumlah_pinjaman">jumlah pinjaman:</label>
             <input type="number" name="jumlah_pinjaman" pattern="[0-9]" id="jumlah_pinjaman" value="0"> 
 
+            <label for="nama">nama:</label>
+            <input type="text" name="nama" id="nama" value=""> 
+
             <label for="waktu_pinjaman">waktu_pinjaman:</label>
             <input type="range" name="waktu_pinjaman" id="waktu_pinjaman" value="6" min="0" max="100" step="1" data-highlight="true">
             <button onclick="input_pinjaman();">submit</button>
@@ -72,11 +75,14 @@
             </ul>
         </div><!-- /navbar -->	
 
+        <label for="search">Search cicilan:</label>
+        <input type="search" name="password" id="search" value="" placeholder="nama">
+
         <div data-role="collapsibleset" data-theme="a" data-content-theme="a" id="list-pinjaman">
             <div data-role="collapsible">
                 <h3>belum ada pinjaman</h3>
                 <ul data-role=listview>
-                </ul>>
+                </ul>
             </div>
         </div>
     </div>

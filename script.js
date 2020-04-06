@@ -3,14 +3,20 @@ var semua_waktu = [1];
 counter = 0;
 
 $( document ).on( "mobileinit", function() {
-    alert("init")
+    
 });
 
 $( window ).on( "orientationchange", function( event ) {
     alert("This device is in " + event.orientation + " mode!");
   });
   
+  $(document).on("pagebeforeshow","#halaman1",function(){
+    alert("anda akan menuju halaman input");
+  });
 
+  $(document).on("pagebeforehide","#halaman2",function(){
+    alert("anda menutup halaman list cicilan?")
+  });
 
 function input_pinjaman(){
     var jumlah = document.getElementById("jumlah_pinjaman");
